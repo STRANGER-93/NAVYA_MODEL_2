@@ -1,0 +1,15 @@
+{
+  "selected_estimator": "GradientBoostingRegressor",
+  "search_method": "RandomizedSearchCV with GroupKFold(n_splits=4)",
+  "optimisation_metric": "mean cross-validated MAE (lower is better)",
+  "best_cv_mae": 1.231510820726346,
+  "best_parameters": {
+    "model__subsample": 0.7,
+    "model__n_estimators": 300,
+    "model__min_samples_leaf": 5,
+    "model__max_depth": 2,
+    "model__learning_rate": 0.05
+  },
+  "n_random_trials": 20,
+  "runtime_seconds": 31.815182199992705
+}

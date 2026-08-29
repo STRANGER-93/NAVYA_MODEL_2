@@ -1,0 +1,13 @@
+{
+  "selected_estimator": "XGBRegressor",
+  "search_method": "Notebook 05: RandomizedSearchCV with GroupKFold(n_splits=4)",
+  "optimisation_metric": "mean grouped CV MAE",
+  "best_cv_mae": 1.2332301753759385,
+  "best_parameters": {
+    "model__subsample": 0.9,
+    "model__n_estimators": 250,
+    "model__max_depth": 3,
+    "model__learning_rate": 0.03,
+    "model__colsample_bytree": 1.0
+  }
+}

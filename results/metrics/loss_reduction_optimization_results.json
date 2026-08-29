@@ -1,0 +1,7 @@
+{
+  "selected_boosting_iteration": 200,
+  "initial_validation_mse": 15.31476934580378,
+  "selected_iteration_validation_mse": 2.6826797902336295,
+  "lowest_diagnostic_validation_mse": 2.6826797902336295,
+  "lowest_diagnostic_iteration": 200
+}

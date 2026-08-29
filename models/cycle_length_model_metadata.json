@@ -1,0 +1,118 @@
+{
+  "model_version": "1.0.0",
+  "training_date": "2026-08-29",
+  "target": "next_cycle_length_days",
+  "feature_names": [
+    "age_years",
+    "menarche_age",
+    "height_cm",
+    "weight_kg",
+    "bmi",
+    "sleep_hours",
+    "stress_level",
+    "exercise_frequency",
+    "uses_medication_or_contraceptive",
+    "prev_cycle_1",
+    "prev_cycle_2",
+    "prev_cycle_3",
+    "avg_previous_cycle_length",
+    "std_previous_cycle_length",
+    "prev_period_1",
+    "prev_period_2",
+    "prev_period_3",
+    "avg_previous_period_length"
+  ],
+  "feature_order": [
+    "age_years",
+    "menarche_age",
+    "height_cm",
+    "weight_kg",
+    "bmi",
+    "sleep_hours",
+    "stress_level",
+    "exercise_frequency",
+    "uses_medication_or_contraceptive",
+    "prev_cycle_1",
+    "prev_cycle_2",
+    "prev_cycle_3",
+    "avg_previous_cycle_length",
+    "std_previous_cycle_length",
+    "prev_period_1",
+    "prev_period_2",
+    "prev_period_3",
+    "avg_previous_period_length"
+  ],
+  "selected_estimator": "XGBRegressor",
+  "hyperparameters": {
+    "model__subsample": 0.9,
+    "model__n_estimators": 250,
+    "model__max_depth": 3,
+    "model__learning_rate": 0.03,
+    "model__colsample_bytree": 1.0
+  },
+  "final_test_metrics": {
+    "MAE": 1.187208565711975,
+    "MSE": 2.85109165832896,
+    "RMSE": 1.6885175919512831,
+    "R2": 0.7928751556030611,
+    "within_1_day_pct": 56.49999999999999,
+    "within_2_days_pct": 84.65
+  },
+  "training_cycle_history_median": 29.0,
+  "training_period_history_median": 5.0,
+  "categorical_mappings": {
+    "stress": {
+      "Very Low": 1,
+      "Low": 2,
+      "Moderate": 3,
+      "High": 4,
+      "Very High": 5
+    },
+    "exercise": {
+      "Never": 0,
+      "1-2 days/week": 1,
+      "3-4 days/week": 2,
+      "5+ days/week": 2
+    },
+    "medication_or_contraceptive": {
+      "No": 0,
+      "Yes": 1,
+      "Not Sure": "NaN"
+    }
+  },
+  "uncertainty_method": "split_conformal",
+  "coverage": 0.9,
+  "q_hat_days": 2.172985076904297,
+  "supported_cycle_lower_bound": 17.0,
+  "supported_cycle_upper_bound": 39.0,
+  "height_conversion_rule": "feet = floor(height); inches = round((height - feet) * 10); height_cm = (feet * 12 + inches) * 2.54; bmi = weight_kg / (height_cm / 100)^2",
+  "validation_ranges": {
+    "age_years": [
+      8,
+      100
+    ],
+    "menarche_age": "7 through age_years",
+    "height_cm": [
+      100,
+      230
+    ],
+    "weight_kg": [
+      25,
+      250
+    ],
+    "sleep_hours": [
+      1,
+      24
+    ],
+    "stress_level": "integer 1 through 5",
+    "exercise_frequency": "integer 0 through 2",
+    "previous_cycle_length": [
+      15,
+      60
+    ],
+    "previous_period_length": [
+      1,
+      14
+    ]
+  }
+}

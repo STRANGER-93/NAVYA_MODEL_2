@@ -1,0 +1,6 @@
+model,best_cv_mae,runtime_seconds,best_params
+XGBRegressor,1.2332301753759385,4.499657800013665,"{'model__subsample': 0.9, 'model__n_estimators': 250, 'model__max_depth': 3, 'model__learning_rate': 0.03, 'model__colsample_bytree': 1.0}"
+GradientBoostingRegressor,1.2372808533336077,35.784607200010214,"{'model__n_estimators': 100, 'model__min_samples_leaf': 3, 'model__max_depth': 3, 'model__learning_rate': 0.1}"
+HistGradientBoostingRegressor,1.237590879681463,8.75529350002762,"{'model__max_leaf_nodes': 15, 'model__max_iter': 150, 'model__learning_rate': 0.1, 'model__l2_regularization': 1}"
+RandomForestRegressor,1.240400221982542,65.07732040004339,"{'model__n_estimators': 350, 'model__min_samples_leaf': 5, 'model__max_features': 0.7, 'model__max_depth': 8}"
+SVR,1.268273615204376,82.63421759998892,"{'model__gamma': 0.03, 'model__epsilon': 0.25, 'model__C': 1}"

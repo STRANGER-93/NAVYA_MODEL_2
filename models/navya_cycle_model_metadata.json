@@ -1,0 +1,110 @@
+{
+  "model_version": "1.0.0",
+  "training_date": "2026-08-29",
+  "target": "next_cycle_length_days",
+  "feature_names": [
+    "age_years",
+    "menarche_age",
+    "height_cm",
+    "weight_kg",
+    "bmi",
+    "sleep_hours",
+    "stress_level",
+    "exercise_frequency",
+    "uses_medication_or_contraceptive",
+    "prev_cycle_1",
+    "prev_cycle_2",
+    "prev_cycle_3",
+    "avg_previous_cycle_length",
+    "std_previous_cycle_length",
+    "prev_period_1",
+    "prev_period_2",
+    "prev_period_3",
+    "avg_previous_period_length"
+  ],
+  "feature_order": [
+    "age_years",
+    "menarche_age",
+    "height_cm",
+    "weight_kg",
+    "bmi",
+    "sleep_hours",
+    "stress_level",
+    "exercise_frequency",
+    "uses_medication_or_contraceptive",
+    "prev_cycle_1",
+    "prev_cycle_2",
+    "prev_cycle_3",
+    "avg_previous_cycle_length",
+    "std_previous_cycle_length",
+    "prev_period_1",
+    "prev_period_2",
+    "prev_period_3",
+    "avg_previous_period_length"
+  ],
+  "selected_estimator": "GradientBoostingRegressor",
+  "hyperparameters": {
+    "model__n_estimators": 200,
+    "model__min_samples_leaf": 3,
+    "model__max_depth": 2,
+    "model__learning_rate": 0.05
+  },
+  "final_test_metrics": {
+    "MAE": 1.1899910055952354,
+    "MSE": 2.8795877122536835,
+    "RMSE": 1.6969347990579025,
+    "R2": 0.7908049868949304
+  },
+  "training_cycle_history_median": 29.0,
+  "training_period_history_median": 5.0,
+  "categorical_mappings": {
+    "stress": {
+      "Very Low": 1,
+      "Low": 2,
+      "Moderate": 3,
+      "High": 4,
+      "Very High": 5
+    },
+    "exercise": {
+      "Never": 0,
+      "1-2 days/week": 1,
+      "3-4 days/week": 2,
+      "5+ days/week": 2
+    },
+    "medication_or_contraceptive": {
+      "No": 0,
+      "Yes": 1,
+      "Not Sure": "NaN"
+    }
+  },
+  "height_conversion_rule": "height_cm = height_decimal_feet * 30.48; bmi = weight_kg / (height_cm / 100)^2",
+  "validation_ranges": {
+    "age_years": [
+      8,
+      100
+    ],
+    "menarche_age": "7 through age_years",
+    "height_cm": [
+      100,
+      230
+    ],
+    "weight_kg": [
+      25,
+      250
+    ],
+    "sleep_hours": [
+      1,
+      24
+    ],
+    "stress_level": "integer 1 through 5",
+    "exercise_frequency": "integer 0 through 2",
+    "previous_cycle_length": [
+      15,
+      60
+    ],
+    "previous_period_length": [
+      1,
+      14
+    ]
+  }
+}

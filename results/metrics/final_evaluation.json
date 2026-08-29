@@ -1,0 +1,45 @@
+{
+  "selected_model": {
+    "model": "XGBRegressor",
+    "best_cv_mae": 1.2332301753759385,
+    "runtime_seconds": 4.499657800013665,
+    "best_params": {
+      "model__subsample": 0.9,
+      "model__n_estimators": 250,
+      "model__max_depth": 3,
+      "model__learning_rate": 0.03,
+      "model__colsample_bytree": 1.0
+    }
+  },
+  "final_test_metrics": {
+    "MAE": 1.187208565711975,
+    "MSE": 2.85109165832896,
+    "RMSE": 1.6885175919512831,
+    "R2": 0.7928751556030611,
+    "within_1_day_pct": 56.49999999999999,
+    "within_2_days_pct": 84.65
+  },
+  "baseline_test_metrics": {
+    "MAE": 1.2231666666666665,
+    "MSE": 3.1411666666666664,
+    "RMSE": 1.772333678139268,
+    "R2": 0.7718019148358378,
+    "within_1_day_pct": 62.5,
+    "within_2_days_pct": 85.7
+  },
+  "improvements": {
+    "mae_improvement": 0.03595810095469143,
+    "mae_improvement_pct": 2.9397548130283226,
+    "rmse_improvement": 0.08381608618798486,
+    "r2_difference": 0.021073240767223278
+  },
+  "uncertainty": {
+    "method": "split_conformal",
+    "nominal_coverage": 0.9,
+    "q_hat_days": 2.172985076904297,
+    "observed_test_coverage": 0.8685,
+    "average_interval_width_days": 4.3459696769714355,
+    "supported_cycle_lower_bound": 17.0,
+    "supported_cycle_upper_bound": 39.0
+  }
+}

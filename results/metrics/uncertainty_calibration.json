@@ -1,0 +1,19 @@
+{
+  "uncertainty_method": "split_conformal",
+  "coverage": 0.9,
+  "q_hat_days": 2.172985076904297,
+  "calibration_rows": 2000,
+  "quantile_level": 0.9005,
+  "supported_cycle_lower_bound": 17.0,
+  "supported_cycle_upper_bound": 39.0,
+  "support_rule": "1st to 99th percentile of training previous-cycle values",
+  "selected_model": "XGBRegressor",
+  "hyperparameters": {
+    "model__subsample": 0.9,
+    "model__n_estimators": 250,
+    "model__max_depth": 3,
+    "model__learning_rate": 0.03,
+    "model__colsample_bytree": 1.0
+  },
+  "model_training_women": 800
+}
