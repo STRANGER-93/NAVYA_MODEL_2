@@ -1,6 +1,6 @@
 {
   "model_version": "1.0.0",
-  "training_date": "2026-08-29",
+  "training_date": "2026-09-01",
   "target": "next_cycle_length_days",
   "feature_names": [
     "age_years",
